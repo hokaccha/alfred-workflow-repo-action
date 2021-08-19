@@ -1,6 +1,6 @@
 # alfred-workflow-repo-action
 
-This alfred-workflow allows you to select a repository directory and set actions for directory configurations such as `$basedir/$host/$owner/$repo`.
+This alfred-workflow allows you to select a repository directory and set an action for the `$basedir/$host/$owner/$repo` directory structure. Such as `~/repos/github.com/org/repo/`.
 
 ## Example: Open with VSCode
 
