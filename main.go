@@ -22,10 +22,10 @@ func run() {
 		wf.FatalError(err)
 	}
 	for _, dir := range dirs {
-		content := strings.Replace(dir, basedir+"/", "", 1)
-		arr := strings.Split(content, "/")
+		target := strings.Replace(dir, basedir+"/", "", 1)
+		arr := strings.Split(target, "/")
 		host, owner, repo := arr[0], arr[1], arr[2]
-		wf.NewItem(content).Arg(basedir, host, owner, repo).Valid(true)
+		wf.NewItem(owner+"/"+repo).Subtitle(target).Arg(basedir, host, owner, repo).Valid(true)
 	}
 	wf.Filter(query)
 	wf.SendFeedback()
